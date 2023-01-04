@@ -6,4 +6,7 @@ In their communication, each machine has its own role: the machine sending reque
 
 A simple diagram of Web Client-Server architecture is presented below:
 
+![Client-Server](./images/client-server.png)
+
+
 
