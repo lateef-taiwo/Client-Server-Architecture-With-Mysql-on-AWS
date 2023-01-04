@@ -12,5 +12,6 @@ A simple diagram of Web Client-Server architecture is presented below:
 ### Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 Name the first server "mysql server" and the second server "mysql client"
 
+![Ec2](./images/EC2.png)
 
 
