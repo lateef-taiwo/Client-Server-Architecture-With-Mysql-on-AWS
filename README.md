@@ -8,6 +8,8 @@ A simple diagram of Web Client-Server architecture is presented below:
 
 ![Client-Server](./images/client-server.png)
 
+----------
+__________
 
 ### Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 Name the first server "mysql server" and the second server "mysql client"
@@ -57,8 +59,19 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![mysql](./images/sql%20server.png)
 
+* Now, You need to configure mysql server to allow connections from remote hosts. Using your favourite text editor, edit mysql config file located at `/etc/mysql/mysql.conf.d/mysqld.cnf`
 
-### Now create the second Linux server (mysql client)
+    `sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf`
+
+    ![config](./images/mysql%20config%201.png)
+
+* Change the line ‘bind address 127.0.0.1’ to ‘bind address 0.0.0.0’ 
+
+    ![config](./images/mysql%20config.png)
+
+------------
+
+ ### Now create the second Linux server (mysql client)
 <!-- UL -->
 * Login to the AWS console
 * Search for EC2 (Elastic Compute Cloud) 
