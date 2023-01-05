@@ -9,11 +9,10 @@ A simple diagram of Web Client-Server architecture is presented below:
 ![Client-Server](./images/client-server.png)
 
 
-## Create and configure two Linux-based virtual servers (EC2 instances in AWS).
+
+### Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 Name the first server "mysql server" and the second server "mysql client"
 
-### Step 1: Create the first server (mysql server)
-<!-- UL -->
 * Login to the AWS console
 * Search for EC2 (Elastic Compute Cloud) 
 * Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
