@@ -153,7 +153,7 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![DB](./images/dbs.png)
 
-* On the client, connect to the server database user you just created
+* On the client, connect to the server using database user you just created
 
     `sudo mysql -u <username> -h <server ip address> -p`
 
