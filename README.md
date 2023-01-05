@@ -165,5 +165,5 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![DB](./images/db_connection.png)
 
-
+-----
 ### CONGRATULATIONS!!!
