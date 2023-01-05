@@ -69,6 +69,20 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![config](./images/mysql%20config.png)
 
+* Now restart mysql service and check the status to ensure its running
+
+    `sudo systemctl restart mysql`
+
+    `sudo systemctl status` mysql
+
+    ![status](./images/systemctl.png)
+
+* Log in to the MySQL console by typing:
+
+    > `$ sudo mysql`
+
+    ![sudo mysql](./images/sudo%20mysql.png)
+    
 ------------
 
  ### Now create the second Linux server (mysql client)
@@ -115,4 +129,41 @@ Name the first server "mysql server" and the second server "mysql client"
     `sudo apt install mysql-client` 
 
     ![mysql](./images/mysql%20client.png)
+
+
+### Now create a database and a database user to test your client-server architecture setup.
+
+* On mysql-server Linux server, log in to the mysql console.
+
+    `sudo mysql -u root -p`
+
+    ![DB root](./images/DB.png)
+
+* Create a database user as in the command below, you choose any name and password of your choice.
+
+    `mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+    ![DB user](./images/db_user.png)
     
+* Now Create a database and grant the user access to the database
+
+    > `mysql> CREATE DATABASE example_database;`
+
+    > `mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+    ![DB](./images/dbs.png)
+
+* On the client, connect to the server database user you just created
+
+    `sudo mysql -u <username> -h <server ip address> -p`
+
+    ![connected](./images/connected.png)
+
+* check the databses on the server using the command `Show Databases;`
+    
+    If you see an output similar to the one below, then you have successfully implemented the client-server architecture.
+
+    ![DB](./images/db_connection.png)
+
+
+### CONGRATULATIONS!!!
