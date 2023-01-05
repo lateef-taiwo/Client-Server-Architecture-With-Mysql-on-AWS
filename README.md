@@ -69,7 +69,7 @@ Name the first server "mysql server" and the second server "mysql client"
     * For windows users choose .ppk for use with putty. Putty is a software that lets you connect remotely to servers
 * Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again! 
 
-* Now, the the first server named "mysql server" has been created.
+* Now, the the second Linux server named "mysql client" has been created.
 
     ![Ec2](./images/EC-2%20.png)
 
