@@ -9,10 +9,11 @@ A simple diagram of Web Client-Server architecture is presented below:
 ![Client-Server](./images/client-server.png)
 
 
-
 ### Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 Name the first server "mysql server" and the second server "mysql client"
 
+### First create the first server (mysql server)
+<!-- UL -->
 * Login to the AWS console
 * Search for EC2 (Elastic Compute Cloud) 
 * Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
@@ -38,7 +39,24 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![ssh](./images/ssh.png)
     
+* Now install install MySQL Server software on mysql server Linux server.
 
+     It is good practice to first update and upgrade the Linux server before installing any software on it. 
+
+    `sudo apt update`
+
+    ![update](./images/update.png)
+
+    `sudo apt upgrade`
+
+    ![upgrade](./images/upgrade.png)
+
+    Install mysql server software
+
+    `sudo apt install mysql-server`
+
+    ![mysql](./images/sql%20server.png)
+    
 
 
 
