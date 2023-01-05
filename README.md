@@ -101,7 +101,5 @@ Name the first server "mysql server" and the second server "mysql client"
 
     `sudo apt install mysql-client` 
 
-    ![mysql](./images/sql%20server.png)
+    ![mysql](./images/mysql%20client.png)
     
-
-
