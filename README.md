@@ -12,7 +12,7 @@ A simple diagram of Web Client-Server architecture is presented below:
 ### Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 Name the first server "mysql server" and the second server "mysql client"
 
-### First create the first server (mysql server)
+### First create the first Linux server (mysql server)
 <!-- UL -->
 * Login to the AWS console
 * Search for EC2 (Elastic Compute Cloud) 
@@ -56,7 +56,52 @@ Name the first server "mysql server" and the second server "mysql client"
     `sudo apt install mysql-server`
 
     ![mysql](./images/sql%20server.png)
-    
 
+
+### Now create the second Linux server (mysql client)
+<!-- UL -->
+* Login to the AWS console
+* Search for EC2 (Elastic Compute Cloud) 
+* Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
+* Type `mysql client` as the name
+ Click create a new key pair, use any name of your choice as the name for the pem file and select .pem.
+    * Linux/Mac users, choose .pem for use with openssh. This allows you to connect to your server using open ssh clients.
+    * For windows users choose .ppk for use with putty. Putty is a software that lets you connect remotely to servers
+* Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again! 
+
+* Now, the the first server named "mysql server" has been created.
+
+    ![Ec2](./images/EC-2%20.png)
+
+* On your local computer, open the terminal and change directory to the Downloads folder, type 
+    > `cd ~/Downloads `
+* Change permissions for the private key file (.pem), otherwise you will get an error “Bad permission”
+    > `sudo chmod 0600 <private-key-name>. pem `
+
+    ![chmod](./images/chmod2.png)
+
+* Connect to the instance by running
+    > `ssh -i <private-key-name>. pem ubuntu@<Public-IP-address>`
+
+    ![ssh](./images/ssh%20client.png)
+    
+* Now install install MySQL Server software on mysql server Linux server.
+
+     It is good practice to first update and upgrade the Linux server before installing any software on it. 
+
+    `sudo apt update`
+
+    ![update](./images/update%20client.png)
+
+    `sudo apt upgrade`
+
+    ![upgrade](./images/upgrade%20client.png)
+
+    Install mysql client software
+
+    `sudo apt install mysql-client` 
+
+    ![mysql](./images/sql%20server.png)
+    
 
 
