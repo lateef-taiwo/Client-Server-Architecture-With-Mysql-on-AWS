@@ -91,7 +91,7 @@ Name the first server "mysql server" and the second server "mysql client"
 * Search for EC2 (Elastic Compute Cloud) 
 * Select your preferred region (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
 * Type `mysql client` as the name
- Click create a new key pair, use any name of your choice as the name for the pem file and select .pem.
+ Click create a new key pair, use any name of your choice as the name for the pem file and select `.pem`.
     * Linux/Mac users, choose .pem for use with openssh. This allows you to connect to your server using open ssh clients.
     * For windows users choose .ppk for use with putty. Putty is a software that lets you connect remotely to servers
 * Save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again! 
