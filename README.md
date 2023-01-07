@@ -82,8 +82,22 @@ Name the first server "mysql server" and the second server "mysql client"
     > `$ sudo mysql`
 
     ![sudo mysql](./images/sudo%20mysql.png)
+
+* Create database.
+
+  `CREATE DATABASE example_database;`
+
+  ![db](./images/db.png)
+
+* Check the databases on the server, type:
+
+  `Show Databases;`
+
+  ![db](./images/db%20on%20server.png)
+
     
 ------------
+____________
 
  ### Now create the second Linux server (mysql client)
 <!-- UL -->
@@ -145,11 +159,11 @@ Name the first server "mysql server" and the second server "mysql client"
 
     ![DB user](./images/db_user.png)
     
-* Now Create a database and grant the user access to the database
+* Now grant the user access to the database
 
     > `mysql> CREATE DATABASE example_database;`
 
-    > `mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';`
+    > `GRANT ALL ON example_database.* TO 'savvy'@'%' WITH GRANT OPTION;`
 
     ![DB](./images/dbs.png)
 
